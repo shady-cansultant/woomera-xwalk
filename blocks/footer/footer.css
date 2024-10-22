@@ -1,0 +1,87 @@
+footer {
+  background-color: var(--primary-color);
+  font-size: var(--body-font-size-s);
+}
+
+footer .footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (width >= 900px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* ---------------------------------------------------------------------------------- */
+
+  /* Acknowledgement section */
+  
+  .columns.acknowledgement {
+    margin-top: 24px;
+    padding-top: 24px;
+    color: var(--light-color);
+    border-top: solid 1px var(--hr-color);
+    justify-content: space-between;
+    align-items: center;
+
+    @media (width >= 900px) {
+      margin-top: 44px;
+    }
+
+    > div {
+      gap: 24px;
+      flex-direction: column-reverse;
+      
+      @media (width >= 900px) {
+        gap: 32px;
+        flex-direction: row;
+      }
+    }
+
+    .columns-img-col img {
+      width: 190px !important;
+      height: auto;
+    }
+  }
+
+  /* ---------------------------------------------------------------------------------- */
+
+  /* Links section */
+
+  .columns.links {
+    padding: 0;
+
+    > div {
+      gap: 30px;
+
+      @media (width >= 900px) {
+        gap: 80px;
+      }
+
+      > div {
+        flex: none;
+      }
+    }
+
+    > div p {
+      margin: 0;
+      color: var(--quaternary-color);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    > div ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    > div ul li {
+      margin-top: 15px;
+    
+      > a {
+        color: var(--light-color);
+      }
+    }
+  }
+}

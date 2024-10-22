@@ -1,0 +1,45 @@
+[
+  {
+    "id": "main",
+    "components": ["section"]
+  },
+  {
+    "id": "columns",
+    "components": []
+  },
+  {
+    "id": "column",
+    "components": ["text", "image", "button", "title"]
+  },
+  {
+    "id": "section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "cta",
+      "articles",
+      "callout",
+      "search",
+      "accordion",
+      "weather",
+      "image-button"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": ["card"]
+  },
+  {
+    "id": "articles",
+    "components": ["article-card"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
+  }
+]

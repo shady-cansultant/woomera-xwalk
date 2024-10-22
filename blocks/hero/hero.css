@@ -1,0 +1,98 @@
+.hero-wrapper {
+  @media (width >= 900px) {
+    max-width: 1200px;
+    padding: 0 32px;
+  }
+}
+
+.hero-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  align-self: flex-end;
+  line-height: 0;
+
+  & p {
+    margin: 0;
+  }
+
+  & picture img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+  }
+
+  @media (width >= 900px) {
+    max-width: 620px;
+  }
+}
+
+.hero-image {
+  z-index: 1;
+  align-self: center;
+}
+
+.section:has(.hero-wrapper) {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.section:has(.hero-image-wrapper) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  @media (width >= 900px) {
+    flex-direction: row;
+  }
+}
+
+.hero .hero-content-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 16px;
+
+  @media (width >= 600px) {
+    padding: 0 32px;
+  }
+
+  @media (width >= 900px) {
+    max-width: 1200px;
+    padding: 0;
+    padding-right: 64px;
+  }
+}
+
+.ellipse {
+  width: 200%;
+  height: 200%;
+  max-width: 200%;
+  max-height: 200%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 15%;
+  background: var(--secondary-color);
+  border: 1px solid var(--white-color);
+  box-shadow: 0 -80px 80px 0 var(--white-color) inset;
+  border-radius: 50%; /* This will make the div an ellipse */
+  z-index: 0;
+
+  @media (width >= 900px) {
+    width: 573px;
+    height: 572px;
+    max-width: 100%;
+    max-height: 100%;
+    top: 138px;
+  }
+}

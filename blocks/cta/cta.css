@@ -1,0 +1,39 @@
+.cta-wrapper {
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+  
+  @media (width >= 900px) {
+    &:not(:first-child) {
+      margin-top: 50px;
+    }
+  }
+
+  .cta {
+    color: var(--text-color);
+  }
+
+  .cta-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    @media (width >= 900px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .button-container {
+      display: flex;
+      align-items: center;
+    }
+  
+    .dark-theme-text {
+        color: var(--light-color);
+    }
+  
+    .dark-theme {
+      display: none;
+    }
+  }
+}

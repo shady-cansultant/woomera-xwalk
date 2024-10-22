@@ -1,0 +1,6 @@
+{
+  "mappings": [
+    "/content/woomera-xwalk/:/",
+    "/content/woomera-xwalk/settings/configuration:/.helix/config.json"
+  ]
+}

@@ -1,0 +1,231 @@
+.cards {
+  @media (width >= 900px) {
+    margin-top: 50px;
+  }
+}
+
+.cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+  grid-gap: 16px;
+}
+
+.cards img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cards .cards-card-body {
+  color: var(--primary-color);
+  margin: 16px;
+}
+
+.cards .cards-card-image {
+  line-height: 0;
+}
+
+.cards .cards-card-body > *:first-child {
+  margin-top: 0;
+}
+
+.cards-card-image p {
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* 'Content' variant */
+.cards.content {
+  > ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 36px;
+    margin-top: 24px;
+
+    @media (width >= 900px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 29px;
+    }
+  }
+
+  > ul li {
+    background-color: var(--senary-color);
+    border: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  > ul li .cards-card-image {
+    padding: 8px 8px 0;
+  }
+
+  > ul li .cards-card-image img {
+    height: 300px;
+    object-fit: cover;
+    transition: 0.3s;
+    filter: saturate(0%);
+    border-radius: 4px;
+  }
+
+  .cards-card-body {
+    display: grid;
+    gap: 16px;
+    margin: 21px;
+  }
+
+  .cards-card-body p {
+    color: var(--text-color-black);
+    font-size: var(--body-font-size-xs);
+    font-style: normal;
+    font-weight: 350;
+    line-height: 130%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cards-card-heading p {
+    color: var(--primary-color);
+    font-size: var(--heading-font-size-s);
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    line-height: 110%;
+    margin: 0;
+  }
+
+  .cards-card-body .chevron {
+    margin-left: auto;
+    content: url("../../icons/chevron-right.svg");
+    transition: 0.3s;
+  }
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* Card 'simple' variant */
+.cards.simple {
+  > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    justify-content: flex-start;
+
+    @media (width >= 900px) {
+      gap: 57px 32px;
+      justify-content: flex-start;
+    }
+  }
+
+  > ul li {
+    display: flex;
+    margin: 0 50px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    @media (width >= 900px) {
+      margin: 0;
+      width: 200px;
+      flex: 0 0 22%;
+      max-width: 22%;
+    }
+  }
+
+  > ul li .cards-card-image {
+    position: relative;
+  }
+
+  > ul li .cards-card-image img {
+    display: block;
+    margin: auto;
+    padding: 0;
+    width: 100px;
+    height: 100%;
+  }
+
+  .cards-card-image::after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 55px;
+    border-bottom: 3px solid #d3dde3;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 12px;
+  }
+
+  .cards-card-body {
+    padding-top: 12px;
+    color: var(--senary-color);
+    text-align: center;
+    font-size: var(--body-font-size-xs);
+    font-weight: 350;
+    line-height: 140%;
+  }
+
+  .cards-card-body p {
+    margin: 0;
+  }
+
+  .cards-card-heading p {
+    color: var(--senary-color);
+    font-size: var(--heading-body-size-m);
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+/* :hover styling  */
+.cards.content ul li:hover {
+  cursor: pointer;
+  background-color: var(--white-color);
+  box-shadow: 0 8px 20px 0 rgb(0 0 0 / 25%);
+
+  .cards-card-image img {
+    filter: saturate(100%);
+  }
+
+  .cards-card-body .chevron {
+    margin-right: -5px;
+  }
+}
+
+/* Dark mode styling  */
+.cards.simple.dark {
+  .cards-card-body {
+    color: var(--text-color-navy);
+  }
+
+  .cards-card-heading p {
+    color: var(--text-color-navy);
+  }
+}
+
+.cards.content.dark {
+  > ul li {
+    background-color: var(--primary-color);
+
+    .cards-card-body p {
+      color: var(--senary-color);
+    }
+
+    .cards-card-heading p {
+      color: var(--white-color);
+    }
+
+    .cards-card-body .chevron {
+      content: url("../../icons/chevron-right-white.svg");
+    }
+  }
+
+  > ul li:hover {
+    background-color: var(--secondary-color);
+  }
+}

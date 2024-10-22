@@ -1,0 +1,97 @@
+.columns > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns img {
+  width: 100%;
+}
+
+.columns > div > div {
+  order: 1;
+}
+
+.columns > div > .columns-img-col {
+  order: 0;
+}
+
+.columns > div > .columns-img-col img {
+  display: block;
+}
+
+.columns .columns-img-col p {
+  margin: 0;
+}
+
+.columns.hero .columns-img-col {
+  position: relative;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.columns.hero > div > .columns-img-col {
+  order: 1;
+}
+
+.columns.hero .shape {
+  border-radius: 50%;
+  width: 200%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--secondary-color);
+  box-shadow: 0 -80px 80px 0 rgb(255 255 255 / 100%) inset;
+}
+
+.columns.hero .columns-img-col img {
+  position: relative;
+  z-index: 1;
+}
+
+main .section.columns-hero-only {
+  padding: 0;
+}
+
+.columns.hero > div > div:not(.columns-img-col) {
+  padding: 0 32px;
+}
+
+.columns.callout {
+  margin: 80px 0;
+  border: 1px var(--tertiary-color) solid;
+  background: var(--septenary-color);
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.columns.callout > div > div:not(.columns-img-col) {
+  padding: 16px;
+}
+
+.columns.callout > div > .columns-img-col {
+  background: linear-gradient(135deg, var(--quinary-color) 25%, var(--secondary-color) 100%);
+}
+
+@media (width >= 900px) {
+  .columns > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 32px;
+  }
+
+  .columns > div > div {
+    flex: 1;
+    order: unset;
+  }
+
+  .columns.hero .shape {
+    width: 100%;
+    top: 25%;
+  }
+
+  .columns.hero .columns-img-col {
+    min-width: 500px;
+  }
+}

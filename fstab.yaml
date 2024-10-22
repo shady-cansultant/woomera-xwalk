@@ -1,0 +1,6 @@
+mountpoints:
+  /:
+    url: "https://author-p135142-e1351358.adobeaemcloud.com/bin/franklin.delivery/apsdemos/woomera-xwalk/main"
+    type: "markup"
+    suffix: ".html"
+

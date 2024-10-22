@@ -1,0 +1,23 @@
+.weather {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--quaternary-color);
+}
+
+.weather-temp {
+  font-size: 2rem;
+}
+
+.weather-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-img {
+  background-color: white;
+  border-radius: 100px;
+  width: 64px;
+  height: 64px;
+}
